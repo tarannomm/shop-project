@@ -6,7 +6,7 @@ import { getProducts } from "./services/api";
 const App = () => {
   return (
     <div>
-      {/* {console.log(getProducts())} */}
+     
       <ProductsProvider>
        <Store/>
       </ProductsProvider>
