@@ -1,13 +1,17 @@
-import React from 'react';
-import productsProvider from './context/productsPrivider';
+import React from "react";
+import Store from "./components/store";
+import ProductsProvider from "./context/productsPrivider";
+import { getProducts } from "./services/api";
+ 
 const App = () => {
-    return (
-        <div>
-            <produtsProvider>
-                
-            </produtsProvider>
-        </div>
-    );
+  return (
+    <div>
+      {/* {console.log(getProducts())} */}
+      <ProductsProvider>
+       <Store/>
+      </ProductsProvider>
+    </div>
+  );
 };
 
 export default App;

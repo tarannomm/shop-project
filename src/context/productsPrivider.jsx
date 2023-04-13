@@ -1,13 +1,15 @@
 import React, { createContext, useEffect, useState } from "react";
-import { api } from "../services/api";
-const productsContext = createContext();
-const productsProvider = (props) => {
+import {getProducts } from "../services/api";
+export const productsContext = createContext();
+const ProductsProvider = (props) => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchApi = async () => {
-      setProducts(await api());
+      setProducts(await getProducts());
+      
     };
     fetchApi();
+     
   }, []);
 
   return (
@@ -17,4 +19,4 @@ const productsProvider = (props) => {
   );
 };
 
-export default productsProvider;
+export default ProductsProvider;
