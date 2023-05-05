@@ -1,15 +1,16 @@
 import React from 'react';
-import { shorten } from './shorten';
+import { Link } from 'react-router-dom';
+import { shorten } from '../../helper/shorten';
 
 const Card = (props) => {
-    const {image,title,price}=props.productData;
+    const {image,title,price,id}=props.productData;
     return (
         <div>
             <img src={image} alt='product'/>
             <h1>{shorten(title)}</h1>
             <span>{price}</span>
             <div>
-                <a>Details</a>
+                <Link to={`products/${id}`}>Details</Link>
                 <button>add to cart</button>
             </div>
         </div>
