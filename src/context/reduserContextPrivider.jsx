@@ -1,5 +1,4 @@
 import React, { useReducer } from "react";
-import { Terser } from "vite";
 const initialState = {
   selectedItems: [],
   itemCounter: 0,
@@ -59,9 +58,17 @@ const cardReduser = (state, action) => {
       };
   }
 };
-const ReduserContextPrivider = () => {
+
+const reduserContext = React.createContext();
+const ReduserContextPrivider = ({children}) => {
   const [state, dispatch] = useReducer(initialState, cardReduser);
-  return <div></div>;
+  return (
+    <div>
+      <reduserContext.Provider value={{state,dispatch}}>
+        {children}
+      </reduserContext.Provider>
+    </div>
+  );
 };
 
 export default ReduserContextPrivider;
