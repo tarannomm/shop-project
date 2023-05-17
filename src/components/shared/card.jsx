@@ -1,8 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { reduserContext } from '../../context/reduserContextPrivider';
-import { isInCart } from '../../helper/isInCard';
-import { shorten } from '../../helper/shorten';
+import { shorten,isInCart, quantityCount  } from '../../helper/functions';
 
 const Card = (props) => {
     const {image,title,price,id}=props.productData;
@@ -14,7 +13,11 @@ const Card = (props) => {
             <span>{price}</span>
             <div>
                 <Link to={`products/${id}`}>Details</Link>
-                {isInCart(state,id)?<button>+</button>:<button>add to cart</button>}
+                {!isInCart(state,id)?<button onClick={()=>dispatch({type:"ADD_ITEM",payload:productData})}>add to cart</button>:<button onClick={()=>dispatch({type:"INCREASE",payload:productData})}>+</button>
+                 }
+                 {quantityCount(state,id)>1 && <button onClick={()=>dispatch({type:"DECREASE"})}>-</button>}
+                 {quantityCount(state,id)===1 && <button onClick={()=>dispatch({type:"REMOVE"})}>-</button>}
+
                 
             </div>
         </div>

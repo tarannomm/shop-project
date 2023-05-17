@@ -5,7 +5,7 @@ import { productsContext } from "../../context/productsPrivider";
 const ProductDetails = () => {
  
   const data = useContext(productsContext);
-  console.log(data)
+   
   const params=useParams(); 
   const id=params.id;
    
