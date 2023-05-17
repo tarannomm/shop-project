@@ -16,7 +16,7 @@ const Card = (props) => {
                 {!isInCart(state,id)?<button onClick={()=>dispatch({type:"ADD_ITEM",payload:productData})}>add to cart</button>:<button onClick={()=>dispatch({type:"INCREASE",payload:productData})}>+</button>
                  }
                  {quantityCount(state,id)>1 && <button onClick={()=>dispatch({type:"DECREASE"})}>-</button>}
-                 {quantityCount(state,id)===1 && <button onClick={()=>dispatch({type:"REMOVE"})}>-</button>}
+                 {quantityCount(state,id)===1 && <button onClick={()=>dispatch({type:"REMOVE"})}>remove</button>}
 
                 
             </div>
