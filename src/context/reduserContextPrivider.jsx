@@ -56,10 +56,13 @@ const cardReduser = (state, action) => {
         total: 0,
         checkout: false,
       };
+      default: 
+        return state
+      
   }
 };
 
-const reduserContext = React.createContext();
+export const reduserContext = React.createContext();
 const ReduserContextPrivider = ({children}) => {
   const [state, dispatch] = useReducer(initialState, cardReduser);
   return (
