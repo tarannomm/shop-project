@@ -20,21 +20,21 @@ const cardReducer = (state , action) => {
              
         }
     case "REMOVE_ITEM":
-        const newSelected=state.selectedItems.filter(item=>item.id!==action.payload.id);
+        const newSelected=state.selectedItems.filter(item=>item.id !== action.payload.id);
         return{
             ...state,
             selectedItems:[...newSelected],
     
         }
     case "INCREASE":
-        const IndexI=state.selectedItems.findIndex(item=>item.id===action.payload.id);
+        const IndexI=state.selectedItems.findIndex(item=> item.id === action.payload.id);
         state.selectedItems[IndexI].quantity++;
         return{
             ...state,
              
         }    
     case "DECREASE":
-        const IndexD=state.selectedItems.findIndex(item=>item.id===action.payload.id);
+        const IndexD=state.selectedItems.findIndex(item=> item.id === action.payload.id);
         state.selectedItems[IndexD].quantity--;
         return{
             ...state,

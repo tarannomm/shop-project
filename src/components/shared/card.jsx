@@ -3,17 +3,18 @@ import { Link } from "react-router-dom";
 import { reducerContext } from "../../context/reducerContextProvider";
 import { shorten, isInCart, quantityCount } from "../../helper/functions";
 import trash from "../../assets/trash.svg";
+import styles from "../../styles/css/card.module.css";
 const Card = (props) => {
   const { image, title, price, id } = props.productData;
   const { state, dispatch } = useContext(reducerContext);
-   console.log(state);
   return (
-    <div>
+    <div className={styles.productContainer}>
       <img src={image} alt="product" />
-      <h1>{shorten(title)}</h1>
-      <span>{price}</span>
-      <div>
+      <h3>{shorten(title)}</h3>
+      <span>{price} $</span>
+      <div className={styles.bottomContainer}>
         <Link to={`products/${id}`}>Details</Link>
+        <div className={styles.buttonsPart}>
         {!isInCart(state, id) ? (
           <button
             onClick={() => dispatch({ type: "ADD_ITEM", payload: props.productData })}
@@ -27,11 +28,11 @@ const Card = (props) => {
             +
           </button>
         )}
-        {quantityCount(state, id) > 1 &&  <button onClick={() => dispatch({ type: "DECREASE" })}>-</button>
+        {quantityCount(state, id) > 1 &&  <button onClick={() => dispatch({ type: "DECREASE",payload:props.productData })}>-</button>
         }
         {quantityCount(state, id) === 1 && 
-          <button onClick={() => dispatch({ type: "REMOVE" })}><img src={trash} alt="trash"/></button>
-        }
+          <button onClick={() => dispatch({ type: "REMOVE_ITEM" , payload:props.productData})}><img src={trash} alt="trash"/></button>
+        }</div>
       </div>
     </div>
   );
