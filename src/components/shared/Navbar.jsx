@@ -38,6 +38,7 @@ const Navbar = () => {
       </div>
 
       <div className={styles.rightContainer}>
+        <div className={styles.carts}>
         
             <a className={styles.shopCart}>
               <FaShoppingCart onClick={()=> setDisplay({profile:false,shopCart:true})} name="shopCart" className={styles.icons1}/>
@@ -49,9 +50,9 @@ const Navbar = () => {
                <p className={display.profile?styles.shopCart1:styles.shopCart2}>profile</p>
             </a>
             
-      </div>
+      </div></div>
       <div  className={darkMode?styles.darkMode:styles.lightMode}  onClick={()=>setMode(!darkMode)}>
-              <div>{darkMode?<BsMoonFill className={styles.toggleIcons}/>:<BsFillSunFill className={styles.toggleIcons}/>}</div>
+              {darkMode?<BsMoonFill className={styles.toggleIcons}/>:<BsFillSunFill className={styles.toggleIcons}/>}
             </div>
     </div>
   );

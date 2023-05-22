@@ -1,3 +1,121 @@
-*{
-    cursor: pointer;
+@import "mixin";
+@import "variables";
+@font-face {
+  font-family: brenza;
+  src: url("../../fonts/Brenza.ttf");
+}
+/* styling to container */
+.container {
+  @include boxStyle(100%, 100px, 0, $color4, none, 0 50px, 0);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+/* styling to logo */
+.logo {
+  span {
+    font-family: brenza;
+    @include textStyle(40px, bold, $color2);
+  }
+  p {
+    @include textStyle(20px, bold, $color6);
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+}
+/* styling to leftConrainer and its elements */
+.leftContainer {
+  margin-left: 240px;
+  ul {
+    list-style: none;
+    display: flex;
+    padding-top: 20px;
+    li {
+      padding: 15px;
+      a {
+        padding-bottom: 0 0 10px 15px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        @include textStyle(20px, bold, $color3);
+        &:hover {
+          @include textStyle(larger, bold, $color5);
+        }
+      }
+    }
+  }
+}
+
+.icons {
+  font-size: 25px;
+  padding-right: 4px;
+}
+/* styling to rightContainer and its element */
+.rightContainer {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  margin-left: 240px;
+  .carts {
+    display: flex;
+    width: 150px;
+   
+    a {
+      color: $color6;
+      position: relative;
+      display: flex;
+      align-items: center;
+      .shopCart1 {
+        visibility: visible;
+        width: 100px;
+        padding: 10px;
+      }
+      .shopCart2 {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+.shopCart1:focus,
+.shopCart2:focus {
+  @include boxStyle(normal, normal, 30px, $color5, 2px solid $color6, 10px, 0);
+}
+.icons1 {
+  font-size: 25px;
+}
+a span {
+  position: absolute;
+  top: -5px;
+  left: 20px;
+  @include textStyle(15px, bold, $color1);
+  background-color: $color6;
+  padding: 0 4px;
+  border-radius: 50%;
+}
+
+.darkMode,
+.lightMode {
+  @include boxStyle(30px, 30px, 20px, $color5, none, 6px 0, 0 10px 0 50px);
+  display: flex;
+}
+ 
+ 
+.darkMode{
+  background-color:$color7;
+  box-shadow: 0 0 3px 0.3px $color4;
+}
+.lightMode{
+  background-color:$color6;
+  box-shadow: 0 0 3px 0.3px $color2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toggleIcons {
+  font-size: 15px;
+  color:$color4;
+  width: 30px;
+  height:22px;
+ 
 }
