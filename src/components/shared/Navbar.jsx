@@ -1,5 +1,5 @@
  
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
  
 import styles from "../../styles/css/Navbar.module.css";
 import{FaShoppingCart, FaBlog} from "react-icons/fa";
@@ -7,6 +7,7 @@ import{HiHome,HiInformationCircle, HiSun} from "react-icons/hi";
 import{AiFillShopping} from "react-icons/ai";
 import {CgProfile} from "react-icons/cg";
 import {BsMoonFill,BsFillSunFill} from "react-icons/bs";
+import { reducerContext } from "../../context/reducerContextProvider";
  
 const Navbar = () => {
   const [darkMode,setMode]=useState(false);
@@ -14,6 +15,8 @@ const Navbar = () => {
     profile:false,
     shopCart:false
   })
+  
+  const {state} = useContext(reducerContext);
   
   return (
     <div className={styles.container}>
@@ -42,7 +45,7 @@ const Navbar = () => {
         
             <a className={styles.shopCart}>
               <FaShoppingCart onClick={()=> setDisplay({profile:false,shopCart:true})} name="shopCart" className={styles.icons1}/>
-              <span>1</span>
+              <span>{state.itemCounter}</span>
               <p className={display.shopCart?styles.shopCart1:styles.shopCart2}>shop cart</p>
             </a>
             <a>
