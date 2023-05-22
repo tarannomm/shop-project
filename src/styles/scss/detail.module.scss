@@ -1,0 +1,56 @@
+@import "mixin";
+@import "variables";
+.container {
+  padding: 60px 0 40px;
+}
+.productContainer {
+  display: flex;
+  justify-content: space-between;
+  @include boxStyle(70%, 400px, 0, none, none, 30px, auto);
+}
+.detailContainer {
+  width: 60%;
+  height: 320px;
+  padding: 20px;
+  h3 {
+    color: $color2;
+    padding-bottom: 10px;
+  }
+  p {
+    padding: 10px 0;
+  }
+  .category {
+    @include textStyle(1.25rem, bold, $color4);
+    span {
+      color: rgb(231, 170, 38);
+    }
+  }
+}
+.productContainer,
+.detailContainer {
+  border: 2px solid rgb(222, 224, 224);
+  border-radius: 10px;
+}
+.productImage {
+  width: 250px;
+}
+
+.boxes {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+ a {
+  text-decoration: none;
+  color:$color5;
+  @include boxStyle(200px,40px,10px,$color6,none,10px 15px ,0);
+  &:hover {
+  background-color:$color2;
+}}
+span {
+    @include textStyle(20px,bold,$color5);
+  background-color:$color3;
+  box-shadow: 0 0 5px 2px rgb(146, 167, 159);
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+}
