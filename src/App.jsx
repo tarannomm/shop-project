@@ -14,7 +14,7 @@ const App = () => {
         <ReducerContextProvider>
           <Navbar/>
           <Routes>
-            <Route path="/products/:id" element={<ProductDetails />} />
+            <Route path="/products/:id" element={<ProductDetails/>} />
             <Route path="/products" element={<Store />} />
             <Route path="/" element={<Store />} />
             <Route path="/*" element={<Navigate path="/products" />} />

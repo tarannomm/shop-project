@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import { productsContext } from "../../context/productsPrivider";
 import styles from "../../styles/css/detail.module.css";
+import ShopButtons from "./ShopButtons";
 const ProductDetails = () => {
   const data = useContext(productsContext);
 
@@ -22,9 +23,9 @@ const ProductDetails = () => {
             <span>category: </span>
             {category}
           </span>
-
+<span>{price} $</span>
           <div className={styles.boxes}>
-            <span>{price} $</span>
+            <ShopButtons/>
             <Link to="/products">Back to shop</Link>
           </div>
         </div>
