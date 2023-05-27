@@ -38,20 +38,4 @@
   a{
     @include textStyle(15px,normal,$color4);
     text-decoration: none;
-  }
-.buttonsPart {
-    display: flex;
-    flex-direction: row;
-    img{
-      width:16px;
-      height: 16px;
-    }
-  button {
-    @include boxStyle(max-content,30px, 5px,$color2,none,8px, 2px);
-    color:$color5;
-    cursor: pointer;
-    min-width: 30px;
-   
-    
-  }
-}}
+  }}

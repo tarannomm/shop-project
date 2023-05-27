@@ -54,8 +54,8 @@ const Navbar = () => {
             </a>
             
       </div></div>
-      <div  className={darkMode?styles.darkMode:styles.lightMode}  onClick={()=>setMode(!darkMode)}>
-              {darkMode?<BsMoonFill className={styles.toggleIcons}/>:<BsFillSunFill className={styles.toggleIcons}/>}
+      <div  className={darkMode?styles.lightMode:styles.darkMode}  onClick={()=>setMode(!darkMode)}>
+              {darkMode?<BsFillSunFill className={styles.toggleIcons}/>:<BsMoonFill className={styles.toggleIcons}/>}
             </div>
     </div>
   );

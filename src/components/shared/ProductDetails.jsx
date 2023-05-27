@@ -23,10 +23,10 @@ const ProductDetails = () => {
             <span>category: </span>
             {category}
           </span>
-<span>{price} $</span>
+          <span>{price} $</span>
           <div className={styles.boxes}>
-            <ShopButtons/>
             <Link to="/products">Back to shop</Link>
+            <ShopButtons productData={product}/>
           </div>
         </div>
       </div>

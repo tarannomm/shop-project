@@ -6,15 +6,14 @@ import Store from "./components/store";
 import ProductsProvider from "./context/productsPrivider";
 import ReducerContextProvider from "./context/reducerContextProvider";
 
-
 const App = () => {
   return (
     <div>
       <ProductsProvider>
         <ReducerContextProvider>
-          <Navbar/>
+          <Navbar />
           <Routes>
-            <Route path="/products/:id" element={<ProductDetails/>} />
+            <Route path="/products/:id" element={<ProductDetails />} />
             <Route path="/products" element={<Store />} />
             <Route path="/" element={<Store />} />
             <Route path="/*" element={<Navigate path="/products" />} />

@@ -41,10 +41,10 @@
   padding: 30px;
  a {
   text-decoration: none;
-  color:$color5;
-  @include boxStyle(200px,40px,10px,$color6,none,10px 15px ,0);
+  color:$color2;
+  @include boxStyle(200px,40px,10px,none,none,10px 15px ,0);
   &:hover {
-  background-color:$color2;
+  color:$color2;
 }}
 span {
     @include textStyle(20px,bold,$color5);

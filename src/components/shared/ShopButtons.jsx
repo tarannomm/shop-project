@@ -2,7 +2,7 @@ import React from 'react';
 import {isInCart, quantityCount } from "../../helper/functions";
 import { reducerContext } from "../../context/reducerContextProvider";
 import { useContext } from 'react';
-import styles from "../../styles/css/card.module.css";
+import styles from "../../styles/css/shopButtons.module.css";
 import trash from "../../assets/trash.svg";
 const ShopButtons = (props) => {
     const { state, dispatch } = useContext(reducerContext);
