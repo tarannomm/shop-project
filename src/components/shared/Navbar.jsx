@@ -8,6 +8,7 @@ import{AiFillShopping} from "react-icons/ai";
 import {CgProfile} from "react-icons/cg";
 import {BsMoonFill,BsFillSunFill} from "react-icons/bs";
 import { reducerContext } from "../../context/reducerContextProvider";
+import { Link } from "react-router-dom";
  
 const Navbar = () => {
   const [darkMode,setMode]=useState(false);
@@ -43,15 +44,15 @@ const Navbar = () => {
       <div className={styles.rightContainer}>
         <div className={styles.carts}>
         
-            <a className={styles.shopCart}>
+            <div className={styles.shopCart}>
               <FaShoppingCart onClick={()=> setDisplay({profile:false,shopCart:true})} name="shopCart" className={styles.icons1}/>
               <span>{state.itemCounter}</span>
-              <p className={display.shopCart?styles.shopCart1:styles.shopCart2}>shop cart</p>
-            </a>
-            <a>
+              <Link className={display.shopCart?styles.shopCart1:styles.shopCart2} to="/shopCart">shop cart</Link>
+            </div>
+            <div>
                <CgProfile onClick={()=> setDisplay({profile:true,shopCart:false})}  name="profile" className={styles.icons1}/>
-               <p className={display.profile?styles.shopCart1:styles.shopCart2}>profile</p>
-            </a>
+               <Link className={display.profile?styles.shopCart1:styles.shopCart2} to="/shopCart">profile</Link>
+            </div>
             
       </div></div>
       <div  className={darkMode?styles.lightMode:styles.darkMode}  onClick={()=>setMode(!darkMode)}>

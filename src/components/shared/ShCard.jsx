@@ -1,16 +1,19 @@
 import React from "react";
-
-const ShCard = () => {
+import { shorten } from "../../helper/functions";
+import ShopButtons from "../shared/ShopButtons";
+import styles from "../../styles/css/shCart.module.css";
+const ShCard = ({product}) => {
+    const {image,title,price,quantity}=product;
   return (
-    <div>
+    <div className={styles.container}>
       <img src={image} alt="product" />
       <div>
         <h3>{shorten(title)}</h3>
-        <span>{price} $</span>
+        <p>{price} $</p>
       </div>
       <span>{quantity}</span>
 
-      {/* <ShopButtons  productData={props.productData}/> */}
+      <ShopButtons  productData={product}/>
       
     </div>
   );

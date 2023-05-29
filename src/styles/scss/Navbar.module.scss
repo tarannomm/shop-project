@@ -59,39 +59,53 @@
   .carts {
     display: flex;
     width: 150px;
-   
-    a {
+
+    div {
       color: $color6;
       position: relative;
       display: flex;
-      align-items: center;
+      align-items: center; 
+       &:focus{
+        @include boxStyle(
+          normal,
+          normal,
+          30px,
+          $color5,
+          2px solid $color6,
+          10px,
+          0
+        );}
+      span {
+        position: absolute;
+        top: -5px;
+        left: 20px;
+        @include textStyle(15px, bold, $color1);
+        background-color: $color6;
+        padding: 0 4px;
+        border-radius: 50%;
+      }
       .shopCart1 {
         visibility: visible;
         width: 100px;
         padding: 10px;
+         
       }
       .shopCart2 {
         visibility: hidden;
+      }
+      .shopCart1,
+      .shopCart2 {
+        text-decoration: none;
+        color: $color2;
+    
+      
       }
     }
   }
 }
 
-.shopCart1:focus,
-.shopCart2:focus {
-  @include boxStyle(normal, normal, 30px, $color5, 2px solid $color6, 10px, 0);
-}
 .icons1 {
   font-size: 25px;
-}
-a span {
-  position: absolute;
-  top: -5px;
-  left: 20px;
-  @include textStyle(15px, bold, $color1);
-  background-color: $color6;
-  padding: 0 4px;
-  border-radius: 50%;
 }
 
 .darkMode,
@@ -99,14 +113,13 @@ a span {
   @include boxStyle(30px, 30px, 20px, $color5, none, 6px 0, 0 10px 0 50px);
   display: flex;
 }
- 
- 
-.darkMode{
-  background-color:$color7;
+
+.darkMode {
+  background-color: $color7;
   box-shadow: 0 0 3px 0.3px $color4;
 }
-.lightMode{
-  background-color:$color6;
+.lightMode {
+  background-color: $color6;
   box-shadow: 0 0 3px 0.3px $color2;
   display: flex;
   align-items: center;
@@ -114,8 +127,7 @@ a span {
 }
 .toggleIcons {
   font-size: 15px;
-  color:$color4;
+  color: $color4;
   width: 30px;
-  height:22px;
- 
+  height: 22px;
 }

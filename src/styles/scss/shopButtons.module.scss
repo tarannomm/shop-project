@@ -9,6 +9,9 @@
     color:$color5;
     cursor: pointer;
     min-width: 30px;
+    &:hover{
+      background-color:$color6;
+    }
    img{
       width:16px;
       height: 16px;
