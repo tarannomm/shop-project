@@ -1,5 +1,6 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+import Landing from "./components/Landing";
 import Navbar from "./components/shared/Navbar";
 import ProductDetails from "./components/shared/ProductDetails";
 import ShopCard from "./components/shopCard";
@@ -14,11 +15,12 @@ const App = () => {
         <ReducerContextProvider>
           <Navbar />
           <Routes>
+            <Route path="/landing" element={<Landing/>}/>
             <Route path="/shopCart" element={<ShopCard/>}/>
             <Route path="/products/:id" element={<ProductDetails />} />
             <Route path="/products" element={<Store />} />
-            <Route path="/" element={<Store />} />
-            <Route path="/*" element={<Navigate path="/products" />} />
+            <Route path="/" element={<Landing/>} />
+            <Route path="/*" element={<Navigate path="/landing" />} />
           </Routes>
         </ReducerContextProvider>
       </ProductsProvider>

@@ -1,0 +1,1 @@
+.buttonsPart{display:flex;flex-direction:row}.buttonsPart button{width:max-content;height:30px;border-radius:5px;background-color:#ec8f16;border:none;padding:8px;margin:2px;color:#fff;cursor:pointer;min-width:30px}.buttonsPart button:hover{background-color:#df7a07}.buttonsPart button img{width:16px;height:16px}/*# sourceMappingURL=shopButtons.module.module.css.map */

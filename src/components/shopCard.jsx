@@ -36,7 +36,7 @@ const ShopCard = () => {
             <button className={styles.clear} onClick={() => dispatch({ type: "REMOVE_ITEM" })}>
               Clear
             </button>
-            <button classname={styles.checkout} onClick={() => dispatch({ type: "CHECKOUT" })}>
+            <button className={styles.checkout} onClick={() => dispatch({ type: "CHECKOUT" })}>
               Checkout
             </button>
           </div>

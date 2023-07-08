@@ -1,6 +1,5 @@
  
 import React, { useContext, useState } from "react";
- 
 import styles from "../../styles/css/Navbar.module.css";
 import{FaShoppingCart, FaBlog} from "react-icons/fa";
 import{HiHome,HiInformationCircle, HiSun} from "react-icons/hi";
@@ -27,7 +26,7 @@ const Navbar = () => {
       <div className={styles.leftContainer}> 
         <ul>
           <li>
-          <a href="#"><HiHome className={styles.icons}/>home</a>
+          <Link to="/landing"><HiHome className={styles.icons}/>home</Link>
           </li>
           <li>
             <a href="#"><AiFillShopping  className={styles.icons}/>shop</a>
