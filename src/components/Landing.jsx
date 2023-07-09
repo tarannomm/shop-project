@@ -6,6 +6,7 @@ const Landing = () => {
         <div>
         <div><h1>buy what you want!!</h1></div>
         <Sliders/>
+        
         </div>
     );
 };
