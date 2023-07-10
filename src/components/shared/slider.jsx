@@ -3,7 +3,7 @@ import Slider from "react-slick"
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { productsContext } from '../../context/productsPrivider';
- import ShCard from './ShCard';
+import Card from './card';
 const Sliders = () => {
     const settings = {
         dots: true,
@@ -17,7 +17,7 @@ const Sliders = () => {
         <div>
         <h2>store Products</h2>
         <Slider {...settings}>
-        {products.map(product=><ShCard key={product.id} product={product}/>)}
+        {products.map(product=><Card key={product.id}  productData={product} />)}
         </Slider>
       </div>
     );

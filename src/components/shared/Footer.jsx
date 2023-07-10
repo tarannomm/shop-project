@@ -9,6 +9,7 @@ const Footer = () => {
   return (
     <footer className={styles.footerContainer}>
       <img src={footer} alt="footer wave" />
+      
       <div className={styles.Footer}>
         <div className={styles.left}>
           <h2>Happy shop</h2>

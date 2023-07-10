@@ -6,7 +6,7 @@
 }
 /* styling to container */
 .container {
-  @include boxStyle(100%, 100px, 0, $color4, none, 0 50px, 0);
+  @include boxStyle(100%, 90px, 0, $color4, none, 0 50px, 0);
   display: flex;
   align-items: center;
   position: relative;
