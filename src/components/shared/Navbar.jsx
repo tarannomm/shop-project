@@ -29,7 +29,7 @@ const Navbar = () => {
           <Link to="/landing"><HiHome className={styles.icons}/>home</Link>
           </li>
           <li>
-            <a href="#"><AiFillShopping  className={styles.icons}/>shop</a>
+            <a href="/products"><AiFillShopping  className={styles.icons}/>shop</a>
           </li>
           <li>
             <a href="#"><FaBlog className={styles.icons}/>blog</a>

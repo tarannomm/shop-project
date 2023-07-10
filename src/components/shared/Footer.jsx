@@ -14,6 +14,7 @@ const Footer = () => {
         <div className={styles.left}>
           <h2>Happy shop</h2>
           <p>Leave your purchases to us.</p>
+          <span>~all right reserved - 2023</span>
         </div>
         <div className={styles.products}>
           <div>
@@ -61,7 +62,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <span>~all right reserved - 2023</span>
+      
     </footer>
   );
 };

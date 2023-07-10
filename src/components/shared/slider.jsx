@@ -6,16 +6,16 @@ import { productsContext } from '../../context/productsPrivider';
 import Card from './card';
 const Sliders = () => {
     const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow:5,
-        slidesToScroll: 1
-      };
+      dots: true,
+      infinite: true,
+      speed:500,
+      slidesToShow:4,
+      slidesToScroll: 1
+    };
       const products=useContext(productsContext);
     return (
-        <div>
-        <h2>store Products</h2>
+        <div style={{width:'80%', margin:'20px auto'}}>
+        <br/>
         <Slider {...settings}>
         {products.map(product=><Card key={product.id}  productData={product} />)}
         </Slider>

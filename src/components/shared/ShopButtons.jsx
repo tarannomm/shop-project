@@ -16,12 +16,15 @@ const ShopButtons = (props) => {
             add to cart
           </button>
         ) : (
+          
           <button
             onClick={() => dispatch({ type: "INCREASE", payload: props.productData })}
           >
             +
           </button>
         )}
+        {quantityCount(state,id)>0 &&  <span style={{color:'orange',padding:'3px'}}>{quantityCount(state,id)}</span>}
+        
         {quantityCount(state, id) > 1 &&  <button onClick={() => dispatch({ type: "DECREASE",payload:props.productData })}>-</button>
         }
         {quantityCount(state,id) === 1 && 
