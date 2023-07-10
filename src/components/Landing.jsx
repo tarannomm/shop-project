@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './shared/Footer';
 import Sliders from './shared/slider';
 
 const Landing = () => {
@@ -6,7 +7,7 @@ const Landing = () => {
         <div>
         <div><h1>buy what you want!!</h1></div>
         <Sliders/>
-        
+        <Footer/>
         </div>
     );
 };
