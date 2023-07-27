@@ -1,7 +1,7 @@
 /* styling to background of form */
 .container {
   padding-top: 120px;
-  height: 100vh +10px;
+  height: 100vh +20px ;
   display: flex;
   align-items: center;
   justify-content: center;

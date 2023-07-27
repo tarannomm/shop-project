@@ -11,14 +11,15 @@
     div{
         border: 3px dashed $color4;
         border-radius: 15px;
-        padding: 40px 20px;
+        padding: 30px 20px;
          
       
     }
     .left {
         width: 65%;
         height:480px;
-        overflow: scroll;
+        overflow-y: scroll;
+        color: $color7;
       }
     .right{
           height: fit-content;
