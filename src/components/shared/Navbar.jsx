@@ -50,7 +50,7 @@ const Navbar = () => {
             </div>
             <div>
                <CgProfile onClick={()=> setDisplay({profile:true,shopCart:false})}  name="profile" className={styles.icons1}/>
-               <Link className={display.profile?styles.shopCart1:styles.shopCart2} to="/shopCart">profile</Link>
+               <Link className={display.profile?styles.shopCart1:styles.shopCart2} to="/login">login</Link>
             </div>
             
       </div></div>

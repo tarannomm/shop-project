@@ -6,6 +6,7 @@
   align-items: center;
   box-shadow: 1px 1px 5px 0.1px $color4;
   overflow: hidden;
+  background-color: #fff;
   h3 {
     color: $color2;
     margin-bottom: 20px;
@@ -22,14 +23,7 @@
   }
 }
 
-// .quantity{
-//     background-color: rgb(228, 174, 26);
-//     color: #fff;
-//     font-weight: bold;
-//      height:30px;
-//      border-radius:5px;
-//     padding: 2px 10px 8px;
-// }
+ 
 .bottomContainer{
   display: flex;
   align-items: center;
@@ -37,5 +31,8 @@
   margin-top: 6px;
   a{
     @include textStyle(15px,normal,$color4);
-    text-decoration: none;
+    
+    &:hover{
+      text-shadow: 0 0 3px $color3;
+    }
   }}

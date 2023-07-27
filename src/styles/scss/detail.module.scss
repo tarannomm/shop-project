@@ -44,13 +44,21 @@
   color:$color2;
   @include boxStyle(200px,40px,10px,none,none,10px 15px ,0);
   &:hover {
-  color:$color2;
+ text-shadow: 0 0 3px $color6;
 }}
 span {
     @include textStyle(20px,bold,$color5);
-  background-color:$color3;
-  box-shadow: 0 0 5px 2px rgb(146, 167, 159);
-  border-radius: 10px;
+   
   padding: 10px 15px;
+
 }
+
+}
+.price{
+  display: inline-block;
+  background-color: $color3;
+  padding: 4px;
+  box-shadow: 0 1px 3px 0.5px $color4;
+  border-radius: 3px;
+  @include textStyle(15px,bold,$color5);
 }

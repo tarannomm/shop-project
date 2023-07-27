@@ -2,8 +2,8 @@ import React from "react";
 import { shorten } from "../../helper/functions";
 import ShopButtons from "../shared/ShopButtons";
 import styles from "../../styles/css/shCart.module.css";
-const ShCard = ({product}) => {
-    const {image,title,price,quantity}=product;
+const ShCard = (props) => {
+    const {image,title,price,quantity}=props.product;
   return (
     <div className={styles.container}>
       <img src={image} alt="product" />
@@ -13,7 +13,7 @@ const ShCard = ({product}) => {
       </div>
       <span>{quantity}</span>
 
-      <ShopButtons  productData={product}/>
+      <ShopButtons  productData={props.product}/>
       
     </div>
   );

@@ -4,11 +4,12 @@ var initialState = {
   itemCounter: 0,
   total: 0,
   checkout: false,
+  clear:false
 };
 const sumItems = (item) => {
   const itemCounter = item.reduce((sum, product) => sum + product.quantity, 0);
   const total = item.reduce(
-    (total, product) => total + (product.quantity * product.price)
+    (total, product) => (+total) + (+product.quantity * +product.price)
   );
   return{
     itemCounter
@@ -22,6 +23,8 @@ const cardReducer = (state, action) => {
         state.selectedItems.push({
           ...action.payload,
           quantity: 1,
+          checkout:false,
+          clear:false,
         });
       }
       return {
@@ -65,6 +68,7 @@ const cardReducer = (state, action) => {
         total: 0,
         itemCounter: 0,
         checkout: true,
+        clear:false,
       };
     case "CLEAR":
       return {
@@ -72,6 +76,7 @@ const cardReducer = (state, action) => {
         total: 0,
         itemCounter: 0,
         checkout: false,
+        clear:true,
       };
     default:
       return {

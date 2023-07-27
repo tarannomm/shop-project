@@ -11,7 +11,7 @@ const Card = (props) => {
       <h3>{shorten(title)}</h3>
       <span>{price} $</span>
       <div className={styles.bottomContainer}>
-        <Link to={`products/${id}`}>Details</Link>
+        <Link to={`/products/${id}`}>Details</Link>
         <ShopButtons  productData={props.productData}/>
       </div>
     </div>

@@ -23,7 +23,10 @@ const ProductDetails = () => {
             <span>category: </span>
             {category}
           </span>
-          <span>{price} $</span>
+          <br/>
+          <br/>
+          
+          <span className={styles.price}>{price} $</span>
           <div className={styles.boxes}>
             <Link to="/products">Back to shop</Link>
             <ShopButtons productData={product}/>

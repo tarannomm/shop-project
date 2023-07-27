@@ -13,8 +13,8 @@ const Footer = () => {
       <div className={styles.Footer}>
         <div className={styles.left}>
           <h2>Happy shop</h2>
-          <p>Leave your purchases to us.</p>
-          <span>~all right reserved - 2023</span>
+          <p>Lorem ipsum dolor sit amet cons</p>
+       
         </div>
         <div className={styles.products}>
           <div>
