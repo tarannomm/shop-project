@@ -1,7 +1,7 @@
 /* styling to background of form */
 .container {
-  padding-top: 85px;
-  height: 100vh;
+  padding-top: 120px;
+  height: 100vh +10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,7 +14,6 @@
 /* styling to form */
 .formContainer {
   width: 350px;
-  height: 510px;
   border: 2px solid rgb(214, 198, 145);
   border-radius: 15px;
   padding: 10px 25px 0;
@@ -89,7 +88,7 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked {
   width: 20px;
   height: 20px;
-  background-color: #65cee0;
+  background-color: #f87a12;
   border-radius: 50%;
 }
 span {

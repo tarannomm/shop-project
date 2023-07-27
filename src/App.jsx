@@ -9,6 +9,7 @@ import ProductsProvider from "./context/productsPrivider";
 import ReducerContextProvider from "./context/reducerContextProvider";
 import Login from "./components/login/Login";
 import SignUp from "./components/login/SignUp";
+import About from "./components/About";
 const App = () => {
   return (
     <div>
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/shopCart" element={<ShopCard/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/signUp" element={<SignUp/>}/>
+            <Route path="/about" element={<About/>}/>
             <Route path="/" element={<Landing/>} />
             <Route path="/*" element={<Navigate to="/landing" />} />
           </Routes>

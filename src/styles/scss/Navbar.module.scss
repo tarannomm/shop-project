@@ -8,6 +8,7 @@
 .container {
   @include boxStyle(100%, 90px, 0, $color4, none, 0 50px, 0);
   display: flex;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
@@ -55,13 +56,16 @@
 }
 /* styling to rightContainer and its element */
 .rightContainer {
-  width: 200px;
+  
+   
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-left: 240px;
   .carts {
     display: flex;
-    width: 150px;
+    width: 170px;
+    justify-content: space-between;
 
     div {
       color: $color6;
@@ -82,7 +86,7 @@
         position: absolute;
         top: -5px;
         left: 20px;
-        @include textStyle(15px, bold, $color1);
+        @include textStyle(12px, bold, $color1);
         background-color: $color6;
         padding: 0 4px;
         border-radius: 50%;
@@ -96,6 +100,7 @@
       .shopCart2 {
         text-decoration: none;
         color: $color2;
+        padding: 3px;
     
       
       }

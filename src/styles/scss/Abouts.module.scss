@@ -1,0 +1,31 @@
+@import "mixin";
+@import "variables";
+.container{
+    background-color:$color1;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 125px 30px 20px;
+    
+   
+    div{
+        border: 3px dashed $color4;
+        border-radius: 15px;
+        padding: 40px 20px;
+         
+      
+    }
+    .left {
+        width: 65%;
+        height:480px;
+        overflow: scroll;
+      }
+    .right{
+          height: fit-content;
+          @include textStyle(18px,bold,$color7);
+        h4,p{
+            padding: 10px;
+        }
+
+    }
+}

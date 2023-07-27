@@ -29,13 +29,11 @@ const Navbar = () => {
           <Link to="/landing"><HiHome className={styles.icons}/>home</Link>
           </li>
           <li>
-            <a href="/products"><AiFillShopping  className={styles.icons}/>shop</a>
+            <Link to="/products"><AiFillShopping  className={styles.icons}/>shop</Link>
           </li>
+           
           <li>
-            <a href="#"><FaBlog className={styles.icons}/>blog</a>
-          </li>
-          <li>
-            <a href="#"><HiInformationCircle className={styles.icons}/>about</a>
+            <Link to="/about"><HiInformationCircle className={styles.icons}/>about</Link>
           </li>
         </ul>
       </div>
@@ -53,10 +51,10 @@ const Navbar = () => {
                <Link className={display.profile?styles.shopCart1:styles.shopCart2} to="/login">login</Link>
             </div>
             
-      </div></div>
-      <div  className={darkMode?styles.lightMode:styles.darkMode}  onClick={()=>setMode(!darkMode)}>
+      </div><div  className={darkMode?styles.lightMode:styles.darkMode}  onClick={()=>setMode(!darkMode)}>
               {darkMode?<BsFillSunFill className={styles.toggleIcons}/>:<BsMoonFill className={styles.toggleIcons}/>}
-            </div>
+            </div></div>
+      
     </div>
   );
 };
